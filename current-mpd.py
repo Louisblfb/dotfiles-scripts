@@ -17,7 +17,7 @@ except socket.error:
   sys.exit(1)
 
 print s.recv(RECV_SIZE)
-s.send('currentsong' + '\n')
+s.send('currentsong\n')
 print s.recv(RECV_SIZE)  
 s.close()
 
