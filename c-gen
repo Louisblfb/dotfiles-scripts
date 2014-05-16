@@ -15,6 +15,6 @@ echo "CC = gcc
 CFLAGS = -Wall -std-c99 -o $1 $2
 
 all:    
-        \$(CC) (CFLAGS) $1.c" > Makefile
+        \$(CC) \$(CFLAGS) $1.c" > Makefile
 
 vim -p $1.c Makefile

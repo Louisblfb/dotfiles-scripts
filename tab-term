@@ -1,0 +1,15 @@
+#!/bin/bash
+
+touch tab-info
+tabbed > tab-info &
+
+sleep 0.05
+
+win=$(<tab-info)
+rm tab-info
+
+for (( i=0; i<$1; i++ )) 
+do  
+    urxvt -embed $win &
+done
+
